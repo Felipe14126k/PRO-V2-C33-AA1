@@ -59,16 +59,16 @@ function preload()
 
 function setup() 
 {
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  if(isMobile){
-    canW=displayWidth;
-    canH=displayHeight;
-    createCanvas(displayWidth+80,displayHeight);
-  }else{
-    canH=windowWidth;
-    canH=windowHeight
-    createCanvas(windowWidth,windowHeight)
-  }
+  createCanvas(500,700)
+  // if(isMobile){
+  //   canW=displayWidth;
+  //   canH=displayHeight;
+  //   createCanvas(displayWidth+80,displayHeight);
+  // }else{
+  //   canH=windowWidth;
+  //   canH=windowHeight
+  //   createCanvas(windowWidth,windowHeight)
+  // }
   
   frameRate(80);
 
@@ -109,7 +109,7 @@ function setup()
   blink.frameDelay = 20;
   eat.frameDelay = 20;
 
-  bunny = createSprite(170,canH-80,100,100);
+  bunny = createSprite(170,665-80,100,100);
   bunny.scale = 0.2;
 
   bunny.addAnimation('blinking',blink);
